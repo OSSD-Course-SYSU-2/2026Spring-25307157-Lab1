@@ -5,7 +5,9 @@
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
     "deviceTypes": [
-      "phone"
+      "phone",
+      "tablet",
+      "2in1"
     ],
     "deliveryWithInstall": true,
     "installationFree": false,
@@ -43,7 +45,17 @@
             "name": "ohos.extension.backup",
             "resource": "$profile:backup_config"
           }
-        ],
+        ]
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC",
+        "reason": "$string:distributed_datasync_reason",
+        "usedScene": {
+          "abilities": ["EntryAbility"],
+          "when": "inuse"
+        }
       }
     ]
   }
